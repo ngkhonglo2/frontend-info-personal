@@ -13,6 +13,7 @@ import { logoutUser } from '../../redux/authRequest';
 
 const Navbar = () => {
     const [navBackground, setNavBackGround] = useState('rgba(0, 0, 0, 0.2)')
+    const {currentUser} = useSelector( state => state.auth.login);
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setNavBackGround('#172b4d') : setNavBackGround('rgba(0, 0, 0, 0.2)')
     }
@@ -30,7 +31,6 @@ const Navbar = () => {
         }
       }, []);
 
-    const {currentUser} = useSelector( state => state.auth.login);
 
     const accessToken = currentUser?.accessToken;
     const id = currentUser?._id

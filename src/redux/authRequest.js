@@ -11,7 +11,7 @@ import {
     registerFaild,
 } from "./authSlice"
 
-export const baseUrl = 'http://localhost:4000'
+export const baseUrl = 'https://be-info-personal.onrender.com'
 
 export const loginUser = async (user, dispatch, navigation, messenger) => {
     dispatch(loginStart())
