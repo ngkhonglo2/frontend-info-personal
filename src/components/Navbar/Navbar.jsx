@@ -10,6 +10,7 @@ import {
 import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../redux/authRequest';
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
 const Navbar = () => {
     const [navBackground, setNavBackGround] = useState('rgba(0, 0, 0, 0.2)')
@@ -29,6 +30,7 @@ const Navbar = () => {
         if(!currentUser) {
           navigation('/login')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
 
