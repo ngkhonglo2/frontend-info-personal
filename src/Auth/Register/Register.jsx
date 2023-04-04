@@ -68,7 +68,7 @@ const Register = () => {
                             </Messenger>
                             <BtnSubmit type='submit'>Register</BtnSubmit>
                             <LoginRegister>
-                                <RegisterLink>Alrealy have an account? <Link to={'/login'}>Login</Link></RegisterLink>
+                                <RegisterLink>Alrealy have an account? <Link to={'/'}>Login</Link></RegisterLink>
                             </LoginRegister>
                         </FormAuth>
                     </FormikAuth>
