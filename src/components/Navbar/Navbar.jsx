@@ -28,7 +28,7 @@ const Navbar = () => {
 
     useEffect(() => {
         if(!currentUser) {
-          navigation('/login')
+          navigation('/')
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
@@ -50,12 +50,12 @@ const Navbar = () => {
             <NavigationNavbar>
                 {currentUser ? (
                     <>
-                        <LinkNavbar to="/">Home</LinkNavbar>
+                        <LinkNavbar to="/home">Home</LinkNavbar>
                         <ButtonNavbar to="/logout" onClick={handleLogoutUser}>Logout</ButtonNavbar>
                     </>
                 ): (
                     <>
-                        <ButtonNavbarRight to="/login">Login</ButtonNavbarRight>
+                        <ButtonNavbarRight to="/">Login</ButtonNavbarRight>
                         <ButtonNavbar to="/register">Register</ButtonNavbar>
                     </>
                 )}

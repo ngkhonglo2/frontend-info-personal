@@ -19,9 +19,9 @@ export const loginUser = async (user, dispatch, navigation, messenger) => {
         const res = await axios.post(`${baseUrl}/v1/auth/login`, user)
         if(res.status === 200) {
             dispatch(loginSuccess(res.data))
-            navigation('/')
+            navigation('/home')
         } else {
-            navigation('/login')
+            navigation('/')
         }
     } catch(err) {
         dispatch(loginFailed())
@@ -40,9 +40,9 @@ export const logoutUser = async (accessToken, id, dispatch, navigation) => {
         })
         if(res.status === 200) {
             dispatch(logoutSuccess())
-            navigation('/login')
-        } else {
             navigation('/')
+        } else {
+            navigation('/home')
         }
     } catch(err) {
         dispatch(logoutFailed())
@@ -56,7 +56,7 @@ export const registerUser = async (newUser, dispatch, navigation, messenger) => 
         const res = await axios.post(`${baseUrl}/v1/user/register`, newUser)
         if(res.status === 200) {
             dispatch(registerSuccess())
-            navigation('/login')
+            navigation('/')
         } else {
             navigation('/register')
         }
